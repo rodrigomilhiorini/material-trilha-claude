@@ -8,8 +8,8 @@ Página publicada e sempre atualizada: https://claude.ai/code/artifact/4d4e0a65-
 
 - **`material-trilha.html`** — o material completo, para abrir direto no navegador (funciona offline, sem servidor). Todo o conteúdo é bilíngue: português sempre à esquerda, inglês sempre à direita (itálico). Tema escuro por padrão, com botão para alternar para claro.
 - **5 módulos**: Introdução às Habilidades de Agente, Construindo com a API Claude, Introdução ao Model Context Protocol, Claude Code em Ação, e Fundamentos de Arquitetura Claude.
-- **Simulados completos**: 46 questões interativas organizadas por área — resposta correta fica oculta até você responder, e sinaliza se você acertou ou errou.
-- **300 questões por aula + 46 de simulado**, todas com gabarito/dica comentado nos dois idiomas.
+- **Simulados completos**: 68 questões interativas organizadas em 9 áreas — resposta correta fica oculta até você responder, e sinaliza se você acertou ou errou.
+- **300 questões por aula + 68 de simulado**, todas com gabarito/dica comentado nos dois idiomas.
 - **61 termos de glossário**, **116 palavras-chave**, pontos de atenção para a prova em cada módulo.
 
 ## Resumos em áudio
@@ -23,6 +23,7 @@ Os áudios com os resumos falados de cada módulo **não ficam dentro do reposit
 - `CPN_5___Revisao_Final_e_Glossario.m4a`
 - `Os_bastidores_técnicos_da_API_Claude.m4a`
 - `Traduções_absurdas_no_material_da_Anthropic.m4a`
+- `Workflows_ou_Agentes_na_arquitetura_do_Claude.m4a`
 
 Se algum áudio novo for adicionado, publique uma nova versão em Releases em vez de commitar o arquivo direto no git.
 
@@ -38,8 +39,10 @@ material-trilha-claude/
 │   ├── render.js          ← lógica de renderização (JS puro, sem dependências)
 │   └── build_pipeline/    ← scripts Python que geraram data/DATA_final3.json, na ordem em que foram executados
 └── sources/
-    ├── Claude_Architecture_Blueprint.pptx   ← guia visual de arquitetura (fonte do Módulo 5)
-    └── guia-de-simulados-anthropic.docx     ← guia de simulados (fonte da seção de Simulados)
+    ├── Claude_Architecture_Blueprint.pptx        ← guia visual de arquitetura (fonte do Módulo 5)
+    ├── guia-de-simulados-anthropic.docx          ← guia de simulados original (46 questões)
+    ├── guiasimuladoscertificacaoccaf.docx        ← segundo guia de simulados (8 questões novas incorporadas)
+    └── guiasimuladosarquiteturaccarfv2.docx      ← terceiro guia de simulados, "v2" (14 questões novas incorporadas + 1 duplicada descartada)
 ```
 
 Os scripts em `src/build_pipeline/` têm caminhos de arquivo fixos da sessão original em que foram gerados — servem como documentação de como o conteúdo foi montado (extração de docx/pptx, tradução, geração de quiz), não para rodar direto sem ajustar os caminhos.

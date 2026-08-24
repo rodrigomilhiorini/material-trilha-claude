@@ -97,6 +97,13 @@
   .modcard p{font-size:13px; color:var(--ink-muted); margin:4px 0 0;}
   @media (max-width:640px){ .modgrid{grid-template-columns:1fr;} }
 
+  /* audio resumos */
+  .audiocard{display:flex; align-items:flex-start; gap:10px;}
+  .audiocard .aico{flex:none; width:34px;height:34px;border-radius:9px;background:var(--accent-soft);color:var(--accent-strong);display:flex;align-items:center;justify-content:center;font-size:16px;}
+  .audiocard .abody{min-width:0;}
+  .audiocard h3{font-size:14.5px;}
+  .audiocard .asize{font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); margin-top:3px;}
+
   /* reference figures (architecture guide diagrams) */
   .lesson-fig{margin:14px 0 0; padding:0;}
   .lesson-fig img{display:block; width:100%; max-width:100%; height:auto; border-radius:10px; border:1px solid var(--line);}
@@ -214,6 +221,7 @@
       <a href="#mod-mcp">3. MCP</a>
       <a href="#mod-code">4. Claude Code</a>
       <a href="#mod-arch">5. Arquitetura</a>
+      <a href="#audios">🎧 Áudios</a>
       <a href="#simulados">Simulados</a>
       <a href="#glossario-geral">Glossário geral</a>
       <a href="#fim">Fim / Fontes</a>
@@ -226,7 +234,7 @@
   <section id="inicio">
     <div class="card cover">
       <span class="tag">Início · como usar este guia</span>
-      <p>Este documento reúne, em um único lugar, o conteúdo dos <strong>5 módulos</strong> da sua trilha: <strong>Introdução às Habilidades de Agente</strong>, <strong>Construindo com a API Claude</strong>, <strong>Introdução ao Protocolo de Contexto do Modelo (MCP)</strong>, <strong>Claude Code em Ação</strong> e <strong>Fundamentos de Arquitetura Claude</strong> (modelos, prompt caching e orquestração de agentes — o domínio de maior peso na prova). Para cada módulo: tópicos e subtópicos, material de estudo <strong>lado a lado em português e inglês</strong>, glossário, palavras-chave e pontos de atenção para a prova — seguidos por um banco de questões de múltipla escolha (com pergunta, opções e gabarito bilíngues). No final, uma seção de <strong>Simulados completos</strong> com 46 questões organizadas por área, no mesmo formato bilíngue e interativo.</p>
+      <p>Este documento reúne, em um único lugar, o conteúdo dos <strong>5 módulos</strong> da sua trilha: <strong>Introdução às Habilidades de Agente</strong>, <strong>Construindo com a API Claude</strong>, <strong>Introdução ao Protocolo de Contexto do Modelo (MCP)</strong>, <strong>Claude Code em Ação</strong> e <strong>Fundamentos de Arquitetura Claude</strong> (modelos, prompt caching e orquestração de agentes — o domínio de maior peso na prova). Para cada módulo: tópicos e subtópicos, material de estudo <strong>lado a lado em português e inglês</strong>, glossário, palavras-chave e pontos de atenção para a prova — seguidos por um banco de questões de múltipla escolha (com pergunta, opções e gabarito bilíngues). No final, uma seção de <strong>Simulados completos</strong> com 68 questões organizadas em 9 áreas, no mesmo formato bilíngue e interativo, e uma seção de <strong>Áudios</strong> com os resumos falados de cada módulo.</p>
       <p>O conteúdo foi extraído e cruzado a partir das fontes que você indicou (a página oficial da trilha na Anthropic Academy, um guia de estudos em português da comunidade, e um repositório de estudo no GitHub com anotações e bancos de questões reais) e dos dois materiais que você enviou depois (o guia visual de arquitetura e o guia de simulados). Onde uma fonte não continha material aprofundado — partes do módulo 2 ainda "em andamento" no repositório, e os cursos de MCP e Claude Code, que não têm repositório dedicado — complementei com a documentação oficial e conhecimento técnico consolidado, sinalizado com a etiqueta <span class="badge synth">complementar</span> nesses trechos.</p>
       <p style="font-size:13px;">A tradução para inglês (sempre a coluna da direita, em itálico) foi feita a partir do texto em português (sempre a coluna da esquerda) — o padrão é o mesmo em toda a página, incluindo nas questões. Use-a para se acostumar com os termos técnicos como eles aparecem na prova real. Prefere o tema claro? Use o botão no topo da página — sua escolha fica salva neste navegador.</p>
       <div class="stat-row" id="statrow"></div>
@@ -244,25 +252,56 @@
     </div>
   </section>
 
+  <section id="audios">
+    <div class="section-head"><span class="section-num">🎧</span><h2 class="h">Resumos em áudio <span style="font-style:italic;font-weight:400;color:var(--ink-muted);font-size:14px;">· Audio summaries</span></h2></div>
+    <p class="lede">Clique em qualquer item para baixar e ouvir o resumo falado. <span style="font-style:italic;">Click any item to download and listen to the spoken summary.</span></p>
+    <div class="modgrid">
+      <a class="card modcard audiocard" href="https://github.com/rodrigomilhiorini/material-trilha-claude/releases/download/v1.0/CPN_Aula1_Habilidades_de_Agente.m4a" target="_blank" rel="noopener">
+        <span class="aico">🎧</span><span class="abody"><span class="mnum">Módulo 1</span><h3>Habilidades de Agente</h3><p class="asize">41,4 MB · .m4a</p></span>
+      </a>
+      <a class="card modcard audiocard" href="https://github.com/rodrigomilhiorini/material-trilha-claude/releases/download/v1.0/CPN_Aula2_API_Claude.m4a" target="_blank" rel="noopener">
+        <span class="aico">🎧</span><span class="abody"><span class="mnum">Módulo 2</span><h3>API Claude</h3><p class="asize">40,6 MB · .m4a</p></span>
+      </a>
+      <a class="card modcard audiocard" href="https://github.com/rodrigomilhiorini/material-trilha-claude/releases/download/v1.0/CPN_3___Protocolo_de_Contexto_do_Modelo.m4a" target="_blank" rel="noopener">
+        <span class="aico">🎧</span><span class="abody"><span class="mnum">Módulo 3</span><h3>Protocolo de Contexto do Modelo</h3><p class="asize">53,2 MB · .m4a</p></span>
+      </a>
+      <a class="card modcard audiocard" href="https://github.com/rodrigomilhiorini/material-trilha-claude/releases/download/v1.0/CPN_4___Claude_Code_em_acao.m4a" target="_blank" rel="noopener">
+        <span class="aico">🎧</span><span class="abody"><span class="mnum">Módulo 4</span><h3>Claude Code em Ação</h3><p class="asize">36,9 MB · .m4a</p></span>
+      </a>
+      <a class="card modcard audiocard" href="https://github.com/rodrigomilhiorini/material-trilha-claude/releases/download/v1.0/CPN_5___Revisao_Final_e_Glossario.m4a" target="_blank" rel="noopener">
+        <span class="aico">🎧</span><span class="abody"><span class="mnum">Módulo 5</span><h3>Revisão Final e Glossário</h3><p class="asize">48,3 MB · .m4a</p></span>
+      </a>
+      <a class="card modcard audiocard" href="https://github.com/rodrigomilhiorini/material-trilha-claude/releases/download/v1.0/Os_bastidores_tecnicos_da_API_Claude.m4a" target="_blank" rel="noopener">
+        <span class="aico">🎧</span><span class="abody"><span class="mnum">Extra</span><h3>Os bastidores técnicos da API Claude</h3><p class="asize">35,8 MB · .m4a</p></span>
+      </a>
+      <a class="card modcard audiocard" href="https://github.com/rodrigomilhiorini/material-trilha-claude/releases/download/v1.0/Traducoes_absurdas_no_material_da_Anthropic.m4a" target="_blank" rel="noopener">
+        <span class="aico">🎧</span><span class="abody"><span class="mnum">Extra</span><h3>Traduções absurdas no material</h3><p class="asize">49,4 MB · .m4a</p></span>
+      </a>
+      <a class="card modcard audiocard" href="https://github.com/rodrigomilhiorini/material-trilha-claude/releases/download/v1.0/Workflows_ou_Agentes_na_arquitetura_do_Claude.m4a" target="_blank" rel="noopener">
+        <span class="aico">🎧</span><span class="abody"><span class="mnum">Extra</span><h3>Workflows ou Agentes na Arquitetura do Claude</h3><p class="asize">.m4a</p></span>
+      </a>
+    </div>
+  </section>
+
   <!-- MODULES INSERTED HERE -->
   <div id="modules-root"></div>
 
   <section id="simulados">
     <div class="section-head"><span class="section-num">Sim.</span><h2 class="h">Simulados completos, por área <span style="font-style:italic;font-weight:400;color:var(--ink-muted);font-size:14px;">· Full mock exams, by topic</span></h2></div>
-    <p class="lede">46 questões do seu guia de simulados, organizadas em 7 áreas — cada questão é interativa: a resposta certa fica oculta até você clicar em uma opção, e a "dica" (justificativa) aparece só depois, sinalizando se você acertou ou errou.</p>
+    <p class="lede">68 questões dos seus guias de simulados, organizadas em 9 áreas — cada questão é interativa: a resposta certa fica oculta até você clicar em uma opção, e a "dica" (justificativa) aparece só depois, sinalizando se você acertou ou errou.</p>
     <div id="simulados-root"></div>
   </section>
 
   <section id="glossario-geral">
     <div class="section-head"><span class="section-num">Glos.</span><h2 class="h">Glossário geral (todos os módulos)</h2></div>
-    <p class="lede">Todos os termos dos 4 módulos, em ordem alfabética, com definição em português e inglês — útil para revisão rápida e para o buscador no topo da página.</p>
+    <p class="lede">Todos os termos dos 5 módulos, em ordem alfabética, com definição em português e inglês — útil para revisão rápida e para o buscador no topo da página.</p>
     <dl class="glossary" id="global-glossary"></dl>
   </section>
 
   <section id="fim">
     <div class="section-head"><span class="section-num">Fim</span><h2 class="h">Conclusão e fontes</h2></div>
     <div class="card" style="padding:16px 18px;">
-      <p><strong>Como fechar o ciclo de estudo:</strong> depois de ler o material e responder os quizzes de cada módulo, use o filtro de busca para revisar só os termos que você ainda hesita. Depois, misture questões dos 4 módulos em uma sessão única, cronometrada, para simular a prova (veja os prompts de simulado no outro artefato — "Trilha Claude Architect" — que já te enviei).</p>
+      <p><strong>Como fechar o ciclo de estudo:</strong> depois de ler o material e responder os quizzes de cada módulo, use o filtro de busca para revisar só os termos que você ainda hesita. Depois, misture questões dos 5 módulos e dos Simulados em uma sessão única, cronometrada, para simular a prova (veja os prompts de simulado no outro artefato — "Trilha Claude Architect" — que já te enviei).</p>
       <p><strong>Fontes consultadas para montar este material:</strong></p>
       <div class="reslist" id="sources"></div>
     </div>
