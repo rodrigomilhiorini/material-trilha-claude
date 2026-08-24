@@ -12,6 +12,20 @@ Página publicada e sempre atualizada: https://claude.ai/code/artifact/4d4e0a65-
 - **300 questões por aula + 46 de simulado**, todas com gabarito/dica comentado nos dois idiomas.
 - **61 termos de glossário**, **116 palavras-chave**, pontos de atenção para a prova em cada módulo.
 
+## Resumos em áudio
+
+Os áudios com os resumos falados de cada módulo **não ficam dentro do repositório** (são arquivos grandes, entre 37MB e 56MB cada). Eles estão disponíveis para download na aba **[Releases](../../releases)** deste repositório:
+
+- `CPN_Aula1_Habilidades_de_Agente.m4a`
+- `CPN_Aula2_API_Claude.m4a`
+- `CPN_3___Protocolo_de_Contexto_do_Modelo.m4a`
+- `CPN_4___Claude_Code_em_acao.m4a`
+- `CPN_5___Revisao_Final_e_Glossario.m4a`
+- `Os_bastidores_técnicos_da_API_Claude.m4a`
+- `Traduções_absurdas_no_material_da_Anthropic.m4a`
+
+Se algum áudio novo for adicionado, publique uma nova versão em Releases em vez de commitar o arquivo direto no git.
+
 ## Estrutura do repositório
 
 ```
