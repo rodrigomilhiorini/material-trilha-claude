@@ -7,10 +7,10 @@ Página publicada e sempre atualizada: https://claude.ai/code/artifact/4d4e0a65-
 ## O que tem aqui
 
 - **`material-trilha.html`** — o material completo, para abrir direto no navegador (funciona offline, sem servidor). Todo o conteúdo é bilíngue: português sempre à esquerda, inglês sempre à direita (itálico). Tema escuro por padrão, com botão para alternar para claro.
-- **5 módulos**: Introdução às Habilidades de Agente, Construindo com a API Claude, Introdução ao Model Context Protocol, Claude Code em Ação, e Fundamentos de Arquitetura Claude.
+- **7 módulos**: Introdução às Habilidades de Agente, Construindo com a API Claude (com addendum "Claude em outras nuvens" — Vertex AI e Amazon Bedrock), Introdução ao Model Context Protocol, Claude Code em Ação, Fundamentos de Arquitetura Claude, AI Fluency: Framework e Fundamentos, e Claude 101.
 - **Simulados completos**: 68 questões interativas organizadas em 9 áreas — resposta correta fica oculta até você responder, e sinaliza se você acertou ou errou.
-- **300 questões por aula + 68 de simulado**, todas com gabarito/dica comentado nos dois idiomas.
-- **61 termos de glossário**, **116 palavras-chave**, pontos de atenção para a prova em cada módulo.
+- **347 questões por aula + 68 de simulado**, todas com gabarito/dica comentado nos dois idiomas.
+- **92 termos de glossário**, **164 palavras-chave**, pontos de atenção para a prova em cada módulo.
 
 ## Resumos em áudio
 
@@ -44,6 +44,14 @@ material-trilha-claude/
     ├── guiasimuladoscertificacaoccaf.docx        ← segundo guia de simulados (8 questões novas incorporadas)
     └── guiasimuladosarquiteturaccarfv2.docx      ← terceiro guia de simulados, "v2" (14 questões novas incorporadas + 1 duplicada descartada)
 ```
+
+## Módulos 6 e 7 — origem do conteúdo
+
+Os módulos **AI Fluency: Framework e Fundamentos** (Módulo 6) e **Claude 101** (Módulo 7), além do addendum "Claude em outras nuvens" dentro do Módulo 2, foram extraídos dos cursos oficiais do Anthropic Partner Network (Skilljar), a partir da página [Claude Certified Architect Foundations — Prep Courses](https://anthropic-partners.skilljar.com/page/claude-certified-architect-foundations-prep-courses):
+
+- **AI Fluency: Framework & Foundations** (Prof. Rick Dakan e Prof. Joseph Feller, licença CC BY-NC-SA 4.0) — 15 aulas em texto, extraídas na íntegra.
+- **Claude 101** — 14 aulas em texto, extraídas na íntegra.
+- **Claude on Google Cloud** (93 aulas) e **Claude with Amazon Bedrock** (83 aulas) — investigados e considerados ~95% duplicados do Módulo 2 (mesma ementa de API Claude) e majoritariamente em vídeo sem transcrição disponível. Por isso, em vez de virarem módulos completos, apenas o conteúdo genuinamente novo (configuração de acesso via Vertex AI e via Bedrock) foi incorporado como addendum ao Módulo 2. A parte de Vertex AI vem de uma aula em texto real do curso ("Vertex AI Setup"); a parte de Bedrock foi sintetizada com base em conhecimento geral consolidado sobre AWS Bedrock, já que o curso não tinha aula equivalente em texto — isso está sinalizado no próprio material com a etiqueta <span>complementar</span>.
 
 Os scripts em `src/build_pipeline/` têm caminhos de arquivo fixos da sessão original em que foram gerados — servem como documentação de como o conteúdo foi montado (extração de docx/pptx, tradução, geração de quiz), não para rodar direto sem ajustar os caminhos.
 

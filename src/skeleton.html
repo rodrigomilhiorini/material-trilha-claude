@@ -221,6 +221,8 @@
       <a href="#mod-mcp">3. MCP</a>
       <a href="#mod-code">4. Claude Code</a>
       <a href="#mod-arch">5. Arquitetura</a>
+      <a href="#mod-fluency">6. AI Fluency</a>
+      <a href="#mod-101">7. Claude 101</a>
       <a href="#audios">🎧 Áudios</a>
       <a href="#simulados">Simulados</a>
       <a href="#glossario-geral">Glossário geral</a>
@@ -234,7 +236,7 @@
   <section id="inicio">
     <div class="card cover">
       <span class="tag">Início · como usar este guia</span>
-      <p>Este documento reúne, em um único lugar, o conteúdo dos <strong>5 módulos</strong> da sua trilha: <strong>Introdução às Habilidades de Agente</strong>, <strong>Construindo com a API Claude</strong>, <strong>Introdução ao Protocolo de Contexto do Modelo (MCP)</strong>, <strong>Claude Code em Ação</strong> e <strong>Fundamentos de Arquitetura Claude</strong> (modelos, prompt caching e orquestração de agentes — o domínio de maior peso na prova). Para cada módulo: tópicos e subtópicos, material de estudo <strong>lado a lado em português e inglês</strong>, glossário, palavras-chave e pontos de atenção para a prova — seguidos por um banco de questões de múltipla escolha (com pergunta, opções e gabarito bilíngues). No final, uma seção de <strong>Simulados completos</strong> com 68 questões organizadas em 9 áreas, no mesmo formato bilíngue e interativo, e uma seção de <strong>Áudios</strong> com os resumos falados de cada módulo.</p>
+      <p>Este documento reúne, em um único lugar, o conteúdo dos <strong>7 módulos</strong> da sua trilha: <strong>Introdução às Habilidades de Agente</strong>, <strong>Construindo com a API Claude</strong> (incluindo um addendum sobre Claude no Google Cloud Vertex AI e Amazon Bedrock), <strong>Introdução ao Protocolo de Contexto do Modelo (MCP)</strong>, <strong>Claude Code em Ação</strong>, <strong>Fundamentos de Arquitetura Claude</strong> (modelos, prompt caching e orquestração de agentes — o domínio de maior peso na prova), <strong>AI Fluency: Framework e Fundamentos</strong> e <strong>Claude 101</strong> (panorama do ecossistema de produtos Claude). Para cada módulo: tópicos e subtópicos, material de estudo <strong>lado a lado em português e inglês</strong>, glossário, palavras-chave e pontos de atenção para a prova — seguidos por um banco de questões de múltipla escolha (com pergunta, opções e gabarito bilíngues). No final, uma seção de <strong>Simulados completos</strong> com 68 questões organizadas em 9 áreas, no mesmo formato bilíngue e interativo, e uma seção de <strong>Áudios</strong> com os resumos falados de cada módulo.</p>
       <p>O conteúdo foi extraído e cruzado a partir das fontes que você indicou (a página oficial da trilha na Anthropic Academy, um guia de estudos em português da comunidade, e um repositório de estudo no GitHub com anotações e bancos de questões reais) e dos dois materiais que você enviou depois (o guia visual de arquitetura e o guia de simulados). Onde uma fonte não continha material aprofundado — partes do módulo 2 ainda "em andamento" no repositório, e os cursos de MCP e Claude Code, que não têm repositório dedicado — complementei com a documentação oficial e conhecimento técnico consolidado, sinalizado com a etiqueta <span class="badge synth">complementar</span> nesses trechos.</p>
       <p style="font-size:13px;">A tradução para inglês (sempre a coluna da direita, em itálico) foi feita a partir do texto em português (sempre a coluna da esquerda) — o padrão é o mesmo em toda a página, incluindo nas questões. Use-a para se acostumar com os termos técnicos como eles aparecem na prova real. Prefere o tema claro? Use o botão no topo da página — sua escolha fica salva neste navegador.</p>
       <div class="stat-row" id="statrow"></div>
@@ -242,13 +244,15 @@
   </section>
 
   <section>
-    <div class="section-head"><span class="section-num">Mapa</span><h2 class="h">Os 5 módulos da trilha</h2></div>
+    <div class="section-head"><span class="section-num">Mapa</span><h2 class="h">Os 7 módulos da trilha</h2></div>
     <div class="modgrid">
       <a class="card modcard" href="#mod-skills"><span class="mnum">Módulo 1</span><h3>Introdução às Habilidades de Agente</h3><p>Agent Skills — SKILL.md, matching, compartilhamento, troubleshooting.</p></a>
-      <a class="card modcard" href="#mod-api"><span class="mnum">Módulo 2</span><h3>Construindo com a API Claude</h3><p>11 seções: da primeira requisição a agentes e workflows.</p></a>
+      <a class="card modcard" href="#mod-api"><span class="mnum">Módulo 2</span><h3>Construindo com a API Claude</h3><p>13 seções: da primeira requisição a agentes, workflows e Claude em outras nuvens (Vertex AI/Bedrock).</p></a>
       <a class="card modcard" href="#mod-mcp"><span class="mnum">Módulo 3</span><h3>Introdução ao Model Context Protocol</h3><p>Servidores e clientes MCP — tools, resources, prompts.</p></a>
       <a class="card modcard" href="#mod-code"><span class="mnum">Módulo 4</span><h3>Claude Code em Ação</h3><p>Sessões longas, configuração, automação, verificação.</p></a>
       <a class="card modcard" href="#mod-arch"><span class="mnum">Módulo 5</span><h3>Fundamentos de Arquitetura Claude</h3><p>Modelos, prompt caching, agentes x fluxos de trabalho — com os diagramas do seu guia.</p></a>
+      <a class="card modcard" href="#mod-fluency"><span class="mnum">Módulo 6</span><h3>AI Fluency: Framework e Fundamentos</h3><p>Os 4Ds (Delegation, Description, Discernment, Diligence) e as três formas de engajar a IA.</p></a>
+      <a class="card modcard" href="#mod-101"><span class="mnum">Módulo 7</span><h3>Claude 101</h3><p>Panorama do ecossistema: Claude.ai, Cowork, Projects, Artifacts, Connectors e mais.</p></a>
     </div>
   </section>
 
@@ -294,21 +298,21 @@
 
   <section id="glossario-geral">
     <div class="section-head"><span class="section-num">Glos.</span><h2 class="h">Glossário geral (todos os módulos)</h2></div>
-    <p class="lede">Todos os termos dos 5 módulos, em ordem alfabética, com definição em português e inglês — útil para revisão rápida e para o buscador no topo da página.</p>
+    <p class="lede">Todos os termos dos 7 módulos, em ordem alfabética, com definição em português e inglês — útil para revisão rápida e para o buscador no topo da página.</p>
     <dl class="glossary" id="global-glossary"></dl>
   </section>
 
   <section id="fim">
     <div class="section-head"><span class="section-num">Fim</span><h2 class="h">Conclusão e fontes</h2></div>
     <div class="card" style="padding:16px 18px;">
-      <p><strong>Como fechar o ciclo de estudo:</strong> depois de ler o material e responder os quizzes de cada módulo, use o filtro de busca para revisar só os termos que você ainda hesita. Depois, misture questões dos 5 módulos e dos Simulados em uma sessão única, cronometrada, para simular a prova (veja os prompts de simulado no outro artefato — "Trilha Claude Architect" — que já te enviei).</p>
+      <p><strong>Como fechar o ciclo de estudo:</strong> depois de ler o material e responder os quizzes de cada módulo, use o filtro de busca para revisar só os termos que você ainda hesita. Depois, misture questões dos 7 módulos e dos Simulados em uma sessão única, cronometrada, para simular a prova (veja os prompts de simulado no outro artefato — "Trilha Claude Architect" — que já te enviei).</p>
       <p><strong>Fontes consultadas para montar este material:</strong></p>
       <div class="reslist" id="sources"></div>
     </div>
   </section>
 
   <footer>
-    <span>Atualizado em 22/08/2026</span>
+    <span>Atualizado em 09/09/2026</span>
     <span>Faiston · Centro de Serviço Compartilhado</span>
   </footer>
 </div>

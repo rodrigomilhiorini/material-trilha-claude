@@ -262,8 +262,14 @@
     {label: "Curso — Building with the Claude API (syllabus oficial)", url: "https://anthropic-partners.skilljar.com/claude-with-the-anthropic-api"},
     {label: "Curso — Introduction to Model Context Protocol (syllabus oficial)", url: "https://anthropic-partners.skilljar.com/introduction-to-model-context-protocol"},
     {label: "Curso — Claude Code in Action (syllabus oficial)", url: "https://anthropic-partners.skilljar.com/claude-code-in-action"},
+    {label: "Página — Claude Certified Architect Foundations, Prep Courses", url: "https://anthropic-partners.skilljar.com/page/claude-certified-architect-foundations-prep-courses"},
+    {label: "Curso — AI Fluency: Framework & Foundations (Prof. Rick Dakan e Prof. Joseph Feller, CC BY-NC-SA 4.0)", url: "https://anthropic-partners.skilljar.com/ai-fluency-framework-foundations"},
+    {label: "Curso — Claude 101 (syllabus oficial)", url: "https://anthropic-partners.skilljar.com/claude-101"},
+    {label: "Curso — Claude on Google Cloud (Vertex AI Setup)", url: "https://anthropic-partners.skilljar.com/claude-on-google-cloud"},
+    {label: "Curso — Claude with Amazon Bedrock", url: "https://anthropic-partners.skilljar.com/claude-in-amazon-bedrock"},
     {label: "Guia de estudos em português (comunidade)", url: "https://lulippe4-hub.github.io/guia-estudos-anthropic/"},
     {label: "Repositório de estudo claude-certification (comunidade)", url: "https://github.com/MateusBurkle/claude-certification"},
+    {label: "Faiston", url: "https://faiston.com/"},
   ];
   var srcHost = document.getElementById('sources');
   SOURCES.forEach(function(s){
