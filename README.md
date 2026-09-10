@@ -14,7 +14,7 @@ Página publicada e sempre atualizada: https://claude.ai/code/artifact/4d4e0a65-
 
 ## Resumos em áudio
 
-Os áudios com os resumos falados de cada módulo **não ficam dentro do repositório** (são arquivos grandes, entre 37MB e 56MB cada). Eles estão disponíveis para download na aba **[Releases](../../releases)** deste repositório:
+Os áudios com os resumos falados de cada módulo **não ficam dentro do repositório** (são arquivos grandes, entre 26MB e 56MB cada). Eles estão disponíveis para download na aba **[Releases](../../releases)** deste repositório:
 
 - `CPN_Aula1_Habilidades_de_Agente.m4a`
 - `CPN_Aula2_API_Claude.m4a`
@@ -24,6 +24,8 @@ Os áudios com os resumos falados de cada módulo **não ficam dentro do reposit
 - `Os_bastidores_técnicos_da_API_Claude.m4a`
 - `Traduções_absurdas_no_material_da_Anthropic.m4a`
 - `Workflows_ou_Agentes_na_arquitetura_do_Claude.m4a`
+- `CPN_Aula6_AI_Fluency.m4a` (gerado via NotebookLM a partir do conteúdo do Módulo 6)
+- `CPN_Aula7_Claude_101.m4a` (gerado via NotebookLM a partir do conteúdo do Módulo 7)
 
 Se algum áudio novo for adicionado, publique uma nova versão em Releases em vez de commitar o arquivo direto no git.
 
